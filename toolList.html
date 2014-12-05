@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<title>嵌入式软件分析与验证工具链 | 工具列表</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="./assets/js/jquery.min.js"></script>
+<script>
+
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+</head>
+<body>
+<div class="body">
+<div class="wrap">
+<div class="wrapper">
+	<!-- start header-->
+	<div class="header">
+		<div class="logo">
+            <a href="index.html"><span> 嵌入式软件分析与验证工具链 </span></a>
+		</div>
+		<div class="cssmenu">
+			<ul>
+		  	 	<li><a href="index.html">首页</a></li>
+				<li><a href="demo.html">演示</a></li>
+				<li class="active"><a href="toolList.html">工具</a></li>
+				<li><a href="about.html">关于</a></li>
+				<div class="clear"></div>
+			 </ul>
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="demo.html">演示</a></li>
+					<li><a href="toolList.html">工具</a></li>
+					<li><a href="about.html">关于</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+    <!-- start content -->
+	 <div class="main1">
+	 	 <div class="content">
+	 	 	<h2>工具列表</h2>
+	 	 </div>
+		<div class="toolList">
+
+			<div class="toolList_list">
+				<h4><a href="./pages/caut.html">CAUT</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+                    <p class="para1"><a href="./pages/caut.html" rel="lightbox"><img src="./assets/caut/caut.jpg" alt=""></a>CAUT是一款基于动态符号执行技术，针对C程序自动生成测试用例的工具。CAUT支持单元测试和全局测试。CAUT的全名是C Analysis and Unit Test, 即C语言分析和单元测试工具。目前CAUT支持覆盖驱动测试满足分支和MC/DC标准。同时该工具也可以扩展满足其他的逻辑覆盖标准，例如条件覆盖，条件/判定覆盖，或多种标准综合的标准。目前CAUT上实现了多种搜索策略。CAUT执行时会先通过CIL预处理用户的被测单元，接着与CAUT内核编译后执行测试并生成测试报告。 </p>
+					<div class="read_more">
+						<a class="btn" href="./pages/caut.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+
+			<div class="toolList_list">
+				<h4><a href="./pages/cbmc.html">CBMC</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+					<p class="para1"><a href="./pages/cbmc.html" rel="lightbox"><img src="./assets/cbmc/cbmc_1.jpg" alt=""></a>CBMC全称是a Bounded Model Checker for C and C++ programs。是一个C/C++代码越界分析检查工具。截至二零一四年十一月二十三日，CBMC的最新版本号为4.9。CBMC支持C89标准、C99标准和C11的大部分标准，以及gcc和Visual Studio绝大多数的扩展功能。CBMC可以检查数组边界越界问题、缓存溢出问题、指针的安全问题、异常处理和用户指定的断言等。</p>
+					<div class="read_more">
+						<a class="btn" href="./pages/cbmc.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+
+			<div class="toolList_list">
+				<h4><a href="./pages/cpf.html">CPF</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+					<p class="para1"><a href="./pages/cpf.html" rel="lightbox"><img src="./assets/cpf/cpf.jpg" alt=""></a>CPF［UNITS］工具提供了针对C语言的单位信息错误检测，用户通过在源代码中，对变量或函数添加特定注释的方式，完成对单位信息的检测工作。CPF[UNITS]依托于UIUC的C Policy Framework项目， 提供了针对C语言特性的验证平台，主要包含指针别名验证，和单位信息验证两个重要实例。</p>
+					<div class="read_more">
+						<a class="btn" href="./pages/cpf.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+
+			<div class="toolList_list">
+				<h4><a href="./pages/cppcheck.html">Cppcheck</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+					<p class="para1"><a href="./pages/cppcheck.html" rel="lightbox"><img src="./assets/cppcheck/cppcheck_1.jpg" alt=""></a>Cppcheck是一个C/C++代码分析工具，由Daniel Marjamaki与Cppcheck团队共同维护。Cppcheck是目前开源项目中，最好的C/C++代码分析工具。Cppcheck的源代码可以在GitHub上获得。Cppcheck计划每一、二个月会发布一个新的版本，截止至2014年11月20日，Cppcheck的版本号为1.67。和C/C++编译器、其他的许多分析工具不一样的是，Cppcheck并不会检查语法错误。Cppcheck旨在检查编译器一般检查不到的错误，它的目标之一是不误报。</p>
+					<div class="read_more">
+						<a class="btn" href="./pages/cppcheck.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+
+			<div class="toolList_list">
+				<h4><a href="./pages/rodin-event-b.html">Event-B</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+					<p class="para1"><a href="./pages/rodin-event-b.html" rel="lightbox"><img src="./assets/eventb/eventb.jpg" alt=""></a>Rodin工具支持对Event-B形式化方法的应用，它对Event-B模型语法分析与基于证明的验证提供核心的功能。B方法是由Jean-Raymond Abrial 在20世纪90年代初开发的，主要是支持软件的形式化开发，Event-B不仅仅只对软件组件进行建模，而且也对系统进行建模。Event-B主要是对系统进行建模和论证的，这些系统包含了许多物理组件，电子器件和软件。</p>
+					<div class="read_more">
+						<a class="btn" href="./pages/rodin-event-b.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+
+			<div class="toolList_list">
+				<h4><a href="./pages/spardl.html">SPARDL</a></h4>
+				<h5>最后更新于 2014/12/5</h5>
+				<div class="toolList_para">
+					<p class="para1"><a href="./pages/spardl.html" rel="lightbox"><img src="./assets/spardl/spardl.jpg" alt=""></a> </p>
+					<div class="read_more">
+						<a class="btn" href="./pages/spardl.html">详情</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			 </div>
+			
+		</div>
+ 	 </div>
+</div>
+</div>
+  <!-- start foorter -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="span_1_of_3">
+			<h3>联系我们</h3>
+			<div class="footer_grid">
+				<div class="foot_img">
+					<img src="./assets/images/home.png" alt="" />
+				</div>
+				<div class="foot_text">
+					<p>中山北路3663号数学馆</p>
+					<p>上海市 中国 200062</p>
+				</div>	
+				<div class="clear"></div>	
+			</div>
+		</div>
+
+		<div class="span_1_of_3">
+			<h3>快速通道</h3>
+			<a href="http://www.tclab.ecnu.edu.cn/" target="_blank"><h5 class="fountain">上海高可信计算重点实验室</h5></a>
+			<a href="http://www.sei.ecnu.edu.cn/" target="_blank"><h5 class="fountain">华东师范大学软件学院</h5></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
+  <!-- start footer copy -->
+<div class="wrap">
+<div class="wrapper">
+	<div class="copy">	
+		<p class="w3-link">©2014 华东师范大学高可信计算重点实验室</p>
+	</div>
+</div>
+</div>
+</body>
+</html>

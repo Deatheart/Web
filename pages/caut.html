@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<title>嵌入式软件分析与验证工具链 | CAUT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+</head>
+<body>
+<div class="body">
+<div class="wrap">
+<div class="wrapper">
+	<!-- start header-->
+	<div class="header">
+		<div class="logo">
+            <a href="index.html"><span> 嵌入式软件分析与验证工具链 </span></a>
+		</div>
+		<div class="cssmenu">
+			<ul>
+			  	<li><a href="../index.html">首页</a></li>
+				<li><a href="../demo.html">演示</a></li>
+				<li><a href="../toolList.html">工具</a></li>
+				<li><a href="../about.html">关于</a></li>
+				<div class="clear"></div>
+			 </ul>
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+					<li><a href="../index.html">首页</a></li>
+					<li><a href="../demo.html">演示</a></li>
+					<li><a href="../toolList.html">工具</a></li>
+					<li><a href="../about.html">关于</a></li>
+				</ul>
+				<a href="#" id="pull">目录</a>
+			</nav>
+		</div>
+	</div>
+    <!-- start content -->
+	 <div class="main1">
+	 	<div class="content">
+	 	 	<h2>CAUT</h2>
+	 	 </div>
+		<div class="toolList">
+			<div class="toolList_list">
+				<h4>代码单元自动测试工具</h4>
+                <h5>主页：<a href="http://lab205.org/caut/">http://lab205.org/caut/</a></h5>
+				<div class="toolList_para">
+					<img src="../assets/caut/caut.jpg" alt="">
+					<p class="para1">CAUT (C Analysis and Unit Testing) 是一个以动态符号执行为基础的工具，在C程序单元测试级别自动生成测试数据。</p>	
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+	 	 		<h2>安装</h2>
+		</div>
+		<div class="toolList">
+			<div class="toolList_list">
+                <h4>仅支持Linux</h4>
+                <p class="para1">可以使用git下载源代码</p>
+                <p> $ git clone http://github.com/tingsu/caut-lib </p>
+                <p class="para1">或者下载源代码包：<a href="../assets/caut/caut.tar.gz">caut.tar.gz</a>或<a href="../assets/caut/caut.tar.bz2">caut.tar.bz2</a></p> 
+                <p class="para1">1. 安装CAUT前，需要安装Ocaml</p>
+                <p class="para1">在Ubuntu/Debian系发行版下：</p>
+                <p> $ sudo apt-get install ocaml</p>
+                <p class="para1">2. 编译源码</p>
+                <p class="para1">1) 编译c-ocaml-sqlite-lib</p>
+                <p class="para1">第一步：</p>
+                <p> $ cd ./tools/c-ocaml-sqlite-lib</p>
+                <p class="para1">第二步：</p>
+                <p> $ make clean</p>
+                <p> $ make </p>
+                <p> $ sudo make instal </p>
+                <p class="para1">库文件默认安装路径是 /usr/lib/ocaml</p>
+                <p class="para1">2) CAUT需要CIL。CIL的源码可以在<a href="http://kerneis.github.com/cil/doc/html/cil/" target="_blank">http://kerneis.github.com/cil/doc/html/cil/</a>获得。</p>
+                <p class="para1">3) 把lpsolve库所在目录加入PATH变量中。在 $(HOME)/.bashrc 里面添加如下内容<p>
+                <p>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/work/caut-lib/lpsolve</p>
+                <p>export C_INCLUDE_PATH=$C_INCLUDE_PATH:/work/caut-lib</p>
+            </div>
+        </div>
+
+		<div class="content">
+	 	 		<h2>下载</h2>
+		</div>
+
+		<div class="grids_of_3">
+				<div class="grid_1_of_3 images_1_of_3">
+				  	<h3>Windows</h3>
+				  	<p>暂不支持 Windows 平台。</p>
+				</div>
+
+				<div class="grid_1_of_3 images_1_of_3">
+				  	<h3 >Linux</h3>
+					  <p></p>
+                      <h5><a href="../assets/caut/caut.tar.gz"><h5 class="exe_icon">CAUT源代码包： caut.tar.gz</h5></a>
+                      <h5><a href="../assets/caut/caut.tar.bz2"><h5 class="exe_icon">CAUT源代码包： caut.tar.bz2</h5></a>
+				</div>
+				<div class="grid_1_of_3 images_1_of_3">
+				  	<h3 >资料</h3>
+					  	<p></p>
+						<a href="../assets/caut/caut-manual.pdf"><h5 class="pdf_icon">CAUT 用户手册</h5></a>
+						<a href="https://github.com/tingsu/caut-lib/blob/master/README"><h5 class="word_icon">CAUT 的 ReadMe</h5></a>
+						<a href="http://lab205.org/home/#!/caut"><h5 class="word_icon">CAUT 的另一个页面</h5></a>
+				</div>
+				<div class="clear"></div>
+	 	 	</div>
+
+		<div class="clear"></div>
+		</div>
+ 	 </div>
+</div>
+</div>
+  <!-- start foorter -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="span_1_of_3">
+			<h3>联系我们</h3>
+			<div class="footer_grid">
+				<div class="foot_img">
+					<img src="../assets/images/home.png" alt="" />
+				</div>
+				<div class="foot_text">
+                    <p>中山北路3663号数学馆</p>
+					<p>上海市 中国 200062</p>
+				</div>	
+				<div class="clear"></div>	
+			</div>
+		</div>
+
+		<div class="span_1_of_3">
+			<h3>快速通道</h3>
+			<a href="http://www.tclab.ecnu.edu.cn/" target="_blank"><h5 class="fountain">上海高可信计算重点实验室</h5></a>
+			<a href="http://www.sei.ecnu.edu.cn/" target="_blank"><h5 class="fountain">华东师范大学软件学院</h5></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
+  <!-- start footer copy -->
+<div class="wrap">
+<div class="wrapper">
+	<div class="copy">	
+		<p class="w3-link">&copy;2014 华东师范大学高可信计算重点实验室</p>
+	</div>
+</div>
+</div>
+</body>
+</html>

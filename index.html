@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<title>嵌入式软件分析与验证工具链</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="./assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="./assets/js/jquery.min.js"></script>
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+</head>
+<body>
+<div class="body">
+<div class="wrap">
+<div class="wrapper">
+	<!-- start header-->
+	<div class="header">
+		<div class="logo">
+            <a href="index.html"><span> 嵌入式软件分析与验证工具链 </span></a>
+		</div>
+		<div class="cssmenu">
+			<ul>
+			  	<li class="active"><a href="index.html">首页</a></li>
+				<li><a href="demo.html">演示</a></li>
+				<li><a href="toolList.html">工具</a></li>
+				<li><a href="about.html">关于</a></li>
+				<div class="clear"></div>
+			 </ul>
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="demo.html">演示</a></li>
+					<li><a href="toolList.html">工具</a></li>
+					<li><a href="about.html">关于</a></li>
+				</ul>
+				<a href="#" id="pull">目录</a>
+			</nav>
+		</div>
+	</div>
+	<!-- start banner -->
+    <div class="banner">
+    	 <img src="./assets/images/banner.png" alt="" />
+    </div>
+     <div class="introduction">
+         <p>随着嵌入式软件的不断发展，人们对嵌入式软件的要求越来越高，不但要求运行在硬件上的软件有较小的体积，较小的功耗、较高的性能，还要求嵌入式软件有极高的可靠性，以保证硬件的可靠运行。软件的测试，往往依赖资深开发人员或测试工程师对代码的阅读理解和分析验证，而这部分工作繁琐复杂，且易出错。</p>
+         <p>为了自动化软件的分析验证，节约软件工作者的时间，提高软件开发效率，上海市高可信重点实验室开发了一套嵌入式软件分析与验证工具链。围绕着 C/C++ 程序的分析与验证，在已有的开源工具上，开发出了一套工具。其中，包括有实时建模层工具 Spardl 和 Rodin Event B ，代码分析工具 Cppcheck ，代码功能验证工具 CBMC ，代码量纲验证工具 CPF ，还有代码单元自动测试工具 CAUT 。</p>
+         <p>利用这些工具，使用者可以很容易的搭建模型、分析验证代码。每个工具的详细介绍及使用说明请查看相关页面。</p>
+     </div>
+    <!-- start content -->
+	 <div class="main">
+	 	 <div class="content">
+	 	 	<h2>推荐工具</h2>
+	 	 </div>
+	 	 <div class="grids_of_4">
+				<div class="grid_1_of_4 images_1_of_4">
+					<a href="./pages/caut.html"><img src="./assets/caut/caut.jpg" title="CAUT" alt="CAUT"/></a>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="./pages/cpf.html"><img src="./assets/cpf/cpf.jpg" title="CPF" alt="CPF"/></a>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="./pages/cppcheck.html"><img src="./assets/cppcheck/cppcheck_1.jpg" title="Cppcheck" alt="Cppcheck"/></a>
+				</div>
+				<div class="grid_1_of_4 images_1_of_4">
+					 <a href="./pages/cbmc.html"><img src="./assets/cbmc/cbmc_1.jpg" title="CBMC" alt="CBMC"/></a>
+				</div>
+				<div class="clear"></div>
+			</div>
+ 	 </div>
+</div>
+</div>
+  <!-- start foorter -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="span_1_of_3">
+			<h3>联系我们</h3>
+			<div class="footer_grid">
+				<div class="foot_img">
+					<img src="./assets/images/home.png" alt="" />
+				</div>
+				<div class="foot_text">
+                    <p>中山北路3663号数学馆</p>
+					<p>上海市 中国 200062</p>
+				</div>	
+				<div class="clear"></div>	
+			</div>
+		</div>
+
+		<div class="span_1_of_3">
+			<h3>快速通道</h3>
+			<a href="http://www.tclab.ecnu.edu.cn/" target="_blank"><h5 class="fountain">上海高可信计算重点实验室</h5></a>
+			<a href="http://www.sei.ecnu.edu.cn/" target="_blank"><h5 class="fountain">华东师范大学软件学院</h5></a>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
+  <!-- start footer copy -->
+<div class="wrap">
+<div class="wrapper">
+	<div class="copy">	
+		<p class="w3-link">&copy;2014 华东师范大学高可信计算重点实验室</p>
+	</div>
+</div>
+</div>
+</body>
+</html>
