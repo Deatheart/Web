@@ -5,6 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../assets/css/highlight/atelier-dune.light.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
 <script>
 		$(function() {
@@ -23,6 +25,12 @@
         			menu.removeAttr('style');
         		}
     		});
+
+            // highlight.js
+            hljs.initHighlightingOnLoad();
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
 		});
 </script>
 </head>
@@ -84,12 +92,12 @@
 				<div class="toolList_para">
 				<p class="para1">1.获取源码</p>	
 				<p class="para1">git: </p>
-				<p>$ git clone git://github.com/danmar/cppcheck.git</p>	
+                <pre><code>$ git clone git://github.com/danmar/cppcheck.git</code></pre>
 				<p class="para1">svn:     </p>
-				<p>$ svn checkout https://github.com/danmar/cppcheck/trunk</p>	
+                <pre><code>$ svn checkout https://github.com/danmar/cppcheck/trunk</code></pre>
                 <p class="para1">或者从下载区下载源代码包。</p>
 				<p class="para1">2.编译</p>	
-				<p class="para1">make</p>	
+                <pre><code>$ make<code></pre>	
                 <p class="para1">更多详细说明请参看Cppcheck用户手册。</p>
 				</div>
 			</div>

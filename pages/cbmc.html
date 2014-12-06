@@ -5,6 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../assets/css/highlight/atelier-dune.light.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="../assets/js/highlight.pack.js"></script>
 <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
 <script>
 		$(function() {
@@ -23,6 +25,12 @@
         			menu.removeAttr('style');
         		}
     		});
+
+            // highlight.js
+            hljs.initHighlightingOnLoad();
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
 		});
 </script>
 </head>
@@ -80,13 +88,13 @@
 			<div class="toolList_list">
                 <p class="para1">支持Windows和Linux</p>
                 <p class="para1">Linux 下可以使用svn下载源代码</p>
-                <p>$ svn co http://www.cprover.org/svn/cbmc/releases/cbmc-4.9</p>
+                <pre><code>$ svn co http://www.cprover.org/svn/cbmc/releases/cbmc-4.9</code></pre>
                 <p class="para1">或者下载源代码包：<a href="../assets/cbmc/cbmc-4-9-linux-32.tgz">cbmc-4-9-linux-32.tgz</a>或<a href="../assets/cbmc/cbmc-4-9-linux-64,tgz">cbmc-4-9-linux-64.tgz</a></p>
                 <p class="para1">Windows 可以下载<a href="../assets/cbmc/cbmc-4-9-win,zip">cbmc-4-9-win.zip</a>，内含所需的exe文件。</p>
                 <p class="para1">Ubuntu/Debian 用户可以从官方库安装</p>
-                <p> $ apt-get install cbmc</p>
+                <pre><code>$ apt-get install cbmc</code></pre>
                 <p class="para1">Fedora/CentOS/RedHat 用户可以从官方库安装</p>
-                <p> $ yum install cbmc </p>
+                <pre><code>$ yum install cbmc</code></pre>
                 <p class="para1">Linux 平台编译方法，和Windows 平台环境搭建，请参看CBMC用户手册。</p>
             </div>
         </div>
